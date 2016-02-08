@@ -34,9 +34,9 @@ class Parcel
         return $this->length;
     }
 
-    function volume($parcel_height, $parcel_width, $parcel_length)
+    function volume()
     {
-        return ($this->height * $this->width * $this->length);
+        return ($this->getHeight() * $this->getWidth() * $this->getLength());
     }
 
     // function costToShip ()
