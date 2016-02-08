@@ -39,10 +39,10 @@ class Parcel
         return ($this->height * $this->width * $this->length);
     }
 
-    function costToShip ()
-    {
-        $parcel_volume = volume()
-    }
+    // function costToShip ()
+    // {
+    //     $parcel_volume = volume()
+    // }
 }
 ?>
 
@@ -60,7 +60,10 @@ class Parcel
             $parcel_height = $_GET["height"];
             $parcel_width = $_GET["width"];
             $parcel_length = $_GET["length"];
-            echo volume()
+            echo "<p> Weight: " .$parcel_weight. "</p>";
+            echo "<p> Height: " .$parcel_height. "</p>";
+            echo "<p> Width: " .$parcel_width. "</p>";
+            echo "<p> Length: " .$parcel_length. "</p>";
         ?>
     </ul>
 </body>
