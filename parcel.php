@@ -39,10 +39,18 @@ class Parcel
         return ($this->getHeight() * $this->getWidth() * $this->getLength());
     }
 
-    // function costToShip ()
-    // {
-    //     $parcel_volume = volume()
-    // }
+    function costToShip ()
+    {
+        $price = 0;
+        if ($this->volume() < 50 && $this->getWeight() < 20) {
+            $price = $this->volume() * .3;
+
+        } elseif ($this->volume() >= 50 && $this->getWeight() <= 20) {
+            $price = $this->volume() * .7;
+        }
+        
+        return $price;
+    }
 }
 ?>
 
