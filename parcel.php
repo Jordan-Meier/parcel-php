@@ -14,9 +14,34 @@ class Parcel
         $this->length = $parcel_length;
     }
 
-    function volume()
+    function getWeight ()
+    {
+        return $this->weight;
+    }
+
+    function getHeight ()
+    {
+        return $this->height;
+    }
+
+    function getWidth ()
+    {
+        return $this->width;
+    }
+
+    function getLength ()
+    {
+        return $this->length;
+    }
+
+    function volume($parcel_height, $parcel_width, $parcel_length)
     {
         return ($this->height * $this->width * $this->length);
+    }
+
+    function costToShip ()
+    {
+        $parcel_volume = volume()
     }
 }
 ?>
@@ -31,7 +56,11 @@ class Parcel
     <h1>Parcel site!</h1>
     <ul>
         <?php
-
+            $parcel_weight = $_GET["weight"];
+            $parcel_height = $_GET["height"];
+            $parcel_width = $_GET["width"];
+            $parcel_length = $_GET["length"];
+            echo volume()
         ?>
     </ul>
 </body>
