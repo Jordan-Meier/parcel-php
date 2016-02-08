@@ -14,6 +14,10 @@ class Parcel
         $this->length = $parcel_length;
     }
 
+    function volume()
+    {
+        return ($this->height * $this->width * $this->length);
+    }
 }
 ?>
 
